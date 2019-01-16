@@ -16,15 +16,24 @@ function displayDate(){
     var Fulldate= document.getElementById("date");
     var fullTime= document.getElementById("time");
     var session= "AM";
+
+    function addZero(e){
+        return (e<10) ? "0"+e : e;
+    }
+
     //date
     d= dt.getDate();
-    m=dt.getMonth();
+    m=dt.getMonth()+1;
     y=dt.getFullYear();
-    Fulldate.innerHTML=`${d}/${d+1}/${y}`;
+
+    d=addZero(d);
+    m=addZero(m);
+    Fulldate.innerHTML=`${d}/${m}/${y}`;
 
     //time
     h=dt.getHours();
-    m=dt.getMinutes();
+    min=dt.getMinutes();
+    s=dt.getSeconds();
 
     if(h==0){
         h=12;
@@ -34,8 +43,11 @@ function displayDate(){
         session= "PM";
     }
 
-    h=(h<10) ? "0"+h :h;
-    m=(m<10) ? "0"+m :m;
+    h=addZero(h);
+    min=addZero(min);
+    s=addZero(s);
 
-    fullTime.innerHTML=`${h}:${m} ${session}`;
+    fullTime.innerHTML=`${h}:${min}:${s} ${session}`;
+
+    setTimeout(displayDate,1000);
 }
