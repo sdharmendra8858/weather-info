@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!-- weather icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
+
+    <script src="script/script.js"></script>
 </head>
 <body>
 
@@ -51,39 +53,39 @@
     </div>
     <!-- weather info -->
     <div class="weather">
-        <h5 id="displayLoc"><span><i class="fas fa-map-marker-alt"></i></span> Ghaziabad, INDIA</h5>
+        <h5><span><i class="fas fa-map-marker-alt"></i></span> <span id="displayLoc"> Ghaziabad, INDIA </span> </h5>
         <div class="container-fluid">
            <div class="row data">
                 <div class="description col-lg-4">
                     <i id="icon-desc" class="wi wi-day-cloudy"></i>
-                    <p id="desc">sunny</p>
+                    <p id="desc"></p>
                 </div>
                 <div class="temprature col-lg-3">
                     <i id="icon-therm" class="wi wi-thermometer"></i>
-                    <p id="temp">32<i class="cels wi wi-celsius"></i></p>
+                    <p id="temp"><i class="cels wi wi-celsius"></i></p>
                 </div>
                 <div class="miscellaneous col-lg-4">
                     <div class="maxmin">
                         <div class="row">
                             <div class="col-lg-6">
                                 <span>Max</span><br>
-                                <p id="max">34<i class="cels wi wi-celsius"></i></p>
+                                <p id="max"><i class="cels wi wi-celsius"></i></p>
                             </div>
                             <div class="col-lg-6">
                                 <span>Min</span><br>
-                                <p id="min">30<i class="cels wi wi-celsius"></i></p>
+                                <p id="min"><i class="cels wi wi-celsius"></i></p>
                             </div>
                         </div>
                     </div>
                     <hr>
                     <div class="humidity">
                         <span>Humidity <i class="humid wi wi-humidity"></i></span><br>
-                        <p id="humid">40%</p>
+                        <p id="humid">--%</p>
                     </div>
                     <hr>
                     <div class="wind">
                         <span>Wind Speed <i class="wind wi wi-strong-wind"></i></span><br>
-                        <p id="wind">4kmph NE</p>
+                        <p id="wind">-kmph</p>
                     </div>
                 </div>
            </div>
